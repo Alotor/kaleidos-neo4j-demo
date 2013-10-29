@@ -1,4 +1,6 @@
-kaleidos-neo4j-demo
+Neo4j Workshop
 ===================
 
-Neo4j Test Data for Kaleidos workshop
+The current project contains the data and queries for an internal presentaiton at
+Kaleidos.
+
