@@ -13,7 +13,7 @@ Download Neo4J version 2.0 from this URL: http://www.neo4j.org/download
 ### Neo4j configuration
 
 Edit the default configuration to enable auto-indexes by the attribute "name". Your configuration
-file "neo4j.propertis" should look similar to:
+file "neo4j.properties" should look similar to:
 
 ```
 # Autoindexing
@@ -30,12 +30,15 @@ relationship_auto_indexing=true
 
 ### Loading test data
 
+```bash
+$NEO4J_HOME/bin/neo4j start
+```
 To load the test data you only have to execute the following command.
 
 ```bash
 cat got-example/create_schema | $NEO4J_HOME/bin/neo4j-shell
 ```
-*Warning* Backup your data because the first statement deletes all the nodes stored into the graph.
+**Warning Backup your data because the first statement deletes all the nodes stored into the graph.**
 
 ### Example queries
 
