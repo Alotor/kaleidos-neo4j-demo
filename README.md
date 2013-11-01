@@ -45,7 +45,7 @@ cat got-example/create_schema | $NEO4J_HOME/bin/neo4j-shell
 #### Retrieve the whole graph(s)
 ```cypher
 START n=node(*)
-RETURN N;
+RETURN n;
 ```
 
 #### Return the children of Tywin Lannister
@@ -105,7 +105,7 @@ RETURN member, father, house;
 #### Count all the members of the houses
 ```cypher
 MATCH member -[:FATHER*]->()-[:HOUSE]-> house
-RETURN house.name AS House, count(member) Members
+RETURN house.name AS House, count(member) AS Members
 ORDER By Members ASC;
 ```
 
